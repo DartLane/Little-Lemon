@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Design Wireframes
+The design wireframes for this project can be viewed here: [Little Lemon Wireframes](https://www.figma.com/design/13HQLApuhiLhCUO1sKIzgE/Little-Lemon-Homepage---wireframe?node-id=0-1&t=vl4zwglggOlWVP2s-1)
+
 ## Available Scripts
 
 In the project directory, you can run:
