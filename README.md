@@ -2,8 +2,12 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Design Wireframes
+## Design Resources
+### Wireframes
 The design wireframes for this project can be viewed here: [Little Lemon Wireframes](https://www.figma.com/design/13HQLApuhiLhCUO1sKIzgE/Little-Lemon-Homepage---wireframe?node-id=0-1&t=vl4zwglggOlWVP2s-1)
+
+### Prototypes
+The interactive prototypes can be found here: [Little Lemon Prototypes](https://www.figma.com/design/13HQLApuhiLhCUO1sKIzgE/Little-Lemon-Homepage---wireframe-%2B-prototype?node-id=40-176&t=bloofQdnVIWb8MEI-1)
 
 ## Available Scripts
 
