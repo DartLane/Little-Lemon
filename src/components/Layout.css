@@ -10,5 +10,5 @@
   .top-bar {
     grid-template-columns: repeat(8, auto);
     gap: 10px;
-  }  
+  }
 }
