@@ -1,0 +1,11 @@
+.header {
+    padding: 2rem 0;
+    /* Use the same 12-column grid system as footer */
+    grid-column: 3 / span 2; /* Logo takes columns 3-4 */
+}
+
+.header img {
+    height: 50px;
+    width: auto;
+    margin-left: 1.5rem;
+}

@@ -1,0 +1,14 @@
+.top-bar {
+    display: grid;
+    grid-template-columns:repeat(12, auto);
+    gap: 20px; /* gutter */
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    grid-template-columns: repeat(8, auto);
+    gap: 10px;
+  }  
+}

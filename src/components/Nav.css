@@ -1,0 +1,91 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  grid-column: 5 / 11; /* Nav takes columns 5-10 */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem 1rem;
+}
+
+/* Burger menu button */
+.burger-menu {
+  display: none; /* Hidden by default on desktop */
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+}
+
+.burger-menu span {
+  width: 30px;
+  height: 3px;
+  background: #333;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+}
+
+/* Mobile styles */
+@media (max-width: 900px) {
+  .burger-menu {
+    display: flex; /* Show burger menu on mobile */
+  }
+
+  .navigation {
+    grid-column: 10;
+    justify-content: flex-end;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: -100%; /* Start off-screen */
+    width: 100%;
+    height: 100vh;
+    background: white;
+    transition: right 0.3s ease-in-out;
+    z-index: 5;
+  }
+
+  .nav-links.open {
+    right: 0; /* Slide in from right */
+  }
+
+  .nav-links li {
+    margin: 1rem 0;
+  }
+
+  /* Animate burger menu */
+  .burger-menu.open span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .burger-menu.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger-menu.open span:last-child {
+    transform: rotate(-45deg) translate(7px, -6px);
+  }
+}

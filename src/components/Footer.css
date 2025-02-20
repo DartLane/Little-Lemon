@@ -1,0 +1,104 @@
+.footer {
+    background-color: #495E57;
+    color: #FFFFFF;
+    padding: 2rem 0;
+    /* Create container with margins */
+    display: grid;
+    grid-template-columns: repeat(12, auto);
+    gap: 20px; /* gutter */
+}
+
+/* Logo section - columns 2-3 */
+.logo-section {
+    grid-column: 3 / span 2;
+}
+
+/* Navigation section - columns 4-5 */
+.navigation-section {
+    grid-column: 5 / span 2;
+}
+
+/* Contact section - columns 6-7 */
+.contact-section {
+    grid-column: 7 / span 2;
+}
+
+/* Social media section - columns 8-9 */
+.socials-section {
+    grid-column: 9 / span 2;
+}
+
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section h3 {
+    margin-bottom: 1rem;
+    font-size: 18px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section li {
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    max-width: 166px;
+    min-height: 260px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .footer {
+        grid-template-columns: repeat(8, auto);
+        gap: 10px; /* smaller gutters on mobile */
+    }
+
+    .logo-section {
+        grid-column: 3 / span 2;
+    }
+
+    .navigation-section {
+        grid-column: 5 / span 2;
+    }
+
+    .contact-section {
+        grid-column: 3 / span 2;
+    }
+
+    .socials-section {
+        grid-column: 5 / span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer {
+        grid-template-columns:
+            20px /* fixed margin on smallest screens */
+            1fr /* single column */
+            20px;
+    }
+
+    .logo-section,
+    .navigation-section,
+    .contact-section,
+    .socials-section {
+        grid-column: 2 / span 1;
+    }
+}

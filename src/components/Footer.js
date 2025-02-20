@@ -1,8 +1,10 @@
+import './Footer.css';
+
 function Footer() {
     return (
         <footer className="footer">
             <section className="footer-section logo-section">
-                <img src="/images/Little-Lemon-logo-white.png" alt="Little Lemon logo"></img>
+                <img src="/images/Little-Lemon-logo-white.png" alt="Little Lemon logo" className='logo'></img>
             </section>
             <section className="footer-section navigation-section">
                 <h3>Doormat Navigation</h3>
