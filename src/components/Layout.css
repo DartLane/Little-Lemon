@@ -6,7 +6,7 @@
     border-bottom: 1px solid #eee;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .top-bar {
     grid-template-columns: repeat(8, auto);
     gap: 10px;

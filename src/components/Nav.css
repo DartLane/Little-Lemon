@@ -1,7 +1,7 @@
 .navigation {
   display: flex;
   align-items: center;
-  grid-column: 5 / 11; /* Nav takes columns 5-10 */
+  grid-column: 5 / 11; /* Adjusted to take columns 5-10, matching the grid system */
 }
 
 .nav-links {
@@ -14,10 +14,16 @@
   width: 100%;
 }
 
+/* Adjust link vertical alignment */
+.nav-links li {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
 .navigation a {
   text-decoration: none;
   color: inherit;
-  padding: 0.5rem 1rem;
 }
 
 /* Burger menu button */
@@ -49,7 +55,7 @@
   }
 
   .navigation {
-    grid-column: 10;
+    grid-column: 7 / 8; /* Adjust mobile grid position */
     justify-content: flex-end;
   }
 
