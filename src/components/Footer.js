@@ -7,7 +7,7 @@ function Footer() {
                 <img src="/images/Little-Lemon-logo-white.png" alt="Little Lemon logo" className='logo'></img>
             </section>
             <section className="footer-section navigation-section">
-                <h3>Doormat Navigation</h3>
+                <h4>Doormat Navigation</h4>
                 <ul>
                     <li><a href="/home">Home</a></li>
                     <li><a href="/about">About</a></li>
@@ -18,7 +18,7 @@ function Footer() {
                 </ul>
             </section>
             <section className="footer-section contact-section">
-                <h3>Contact</h3>
+                <h4>Contact</h4>
                 <ul>
                     <li>Address</li>
                     <li>Phone Number</li>
@@ -26,7 +26,7 @@ function Footer() {
                 </ul>
             </section>
             <section className="footer-section socials-section">
-                <h3>Social Media Links</h3>
+                <h4>Social Media Links</h4>
                 <ul>
                     <li><a href="https://x.com/home" rel="noreferrer" target="_blank">X</a></li>
                     <li><a href="https://instagram.com" rel="noreferrer" target="_blank">Instagram</a></li>
