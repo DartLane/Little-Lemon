@@ -9,7 +9,7 @@ export default function CallToAction() {
                 <p className='hero-text'>Culpa est adipisicing in mollit adipisicing incididunt laboris sit labore exercitation dolore ad qui pariatur commodo nulla minim cillum</p>
                 <button className="yellow-button hero-button">Reserve a Table</button>
             </section>
-            <img src="/images/Hero-image.png" alt="Food tray with bruchetas" className='hero-image'></img>
+            <img src="/images/Hero-image.png" alt="Food tray with bruchetas" className='hero-image' />
         </section>
     );
 }
