@@ -1,10 +1,10 @@
 import './Main.css';
+import CallToAction from './CallToAction';
 
 function Main() {
     return (
         <main className="main">
-            <h1>Title</h1>
-            <p>Paragraph text</p>
+            <CallToAction />
         </main>
     );
 }

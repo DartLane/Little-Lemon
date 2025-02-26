@@ -49,3 +49,15 @@ p, span {
   font-weight: 400;
   font-size: 16px;
 }
+
+.yellow-button {
+  background-color: #F4CE14;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 16%;
+  padding: 10px 20px;
+  height: 73px;
+  cursor: pointer;
+}

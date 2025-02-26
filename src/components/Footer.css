@@ -4,7 +4,7 @@
     padding: 2rem 0;
     /* Create container with margins */
     display: grid;
-    grid-template-columns: repeat(12, auto);
+    grid-template-columns: repeat(12, 1fr);
     gap: 20px; /* gutter */
 }
 
@@ -67,7 +67,7 @@
 /* Responsive design */
 @media (max-width: 768px) {
     .footer {
-        grid-template-columns: repeat(8, auto);
+        grid-template-columns: repeat(8, 1fr);
         gap: 10px; /* smaller gutters on mobile */
     }
 
@@ -76,7 +76,7 @@
     }
 
     .navigation-section {
-        grid-column: 5 / span 2;
+        grid-column: 6 / span 2;
     }
 
     .contact-section {
@@ -84,7 +84,7 @@
     }
 
     .socials-section {
-        grid-column: 5 / span 2;
+        grid-column: 6 / span 2;
     }
 }
 

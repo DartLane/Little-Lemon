@@ -1,0 +1,65 @@
+.hero {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 2rem 0;
+    background-color: #495E57;
+    position: relative; /* Add this to allow absolute positioning within */
+    overflow: visible; /* Allow content to extend beyond container */
+}
+
+.hero-details {
+    grid-column: 3 / span 8;
+}
+
+.hero-title {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.hero-subtitle {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.hero-text {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    max-width: 45%;
+}
+
+.hero-button {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    width: 206px;
+}
+
+.hero-image {
+    position: absolute;
+    max-width: 357px;
+    height: 387px;
+    right: calc(16.67% + 20px);
+    top: 4rem;
+    object-fit: cover;
+    z-index: 1; /* Ensure image appears above other content */
+}
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 10px; /* smaller gutters on mobile */
+    }
+
+    .hero-details {
+        grid-column: 2 / span 6;
+    }
+
+    .hero-image {
+        height: 300px;
+        right: calc(8% + 10px);
+        top: 25%;
+        z-index: 0;
+        position: relative;
+    }
+
+}
