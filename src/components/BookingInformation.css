@@ -1,0 +1,31 @@
+.booking-information-section {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    padding: 2rem 0;
+    background-color: #495E57;
+}
+
+.booking-information-container {
+    grid-column: 3 / span 8;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 20px;
+}
+
+.booking-information-container h2 {
+    grid-column: 2 / span 6;
+    color: #F4CE14;
+    text-decoration: underline;
+    text-decoration-thickness: 7.5%;
+    text-underline-offset: 14%;
+}
+
+.booking-information-container h1 {
+    grid-column: 2 / span 6;
+    color: #F4CE14;
+}
+
+.booking-information-container span {
+    grid-column: 2 / span 6;
+}
