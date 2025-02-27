@@ -53,7 +53,7 @@
 
 .bottom-image {
     top: 180px;
-    left: 140px;
+    left: 20%;
     z-index: 1;
 }
 
@@ -95,6 +95,7 @@
 @media (max-width: 600px) {
     .chicago-images {
         height: 350px;
+        right: 70px;
     }
 
     .chef-image {

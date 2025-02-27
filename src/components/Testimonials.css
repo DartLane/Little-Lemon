@@ -68,13 +68,13 @@
 @media (max-width: 1200px) {
     .testimonials-container {
         grid-template-columns: repeat(2, 1fr);
+        gap: 80px;
     }
 }
 
 @media (max-width: 900px) {
     .testimonials-section {
         grid-template-columns: repeat(8, 1fr);
-        gap: 10px;
     }
 
     .testimonials-container {
