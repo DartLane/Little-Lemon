@@ -1,6 +1,17 @@
 import './Footer.css';
+import { Link, useLocation } from 'react-router';
 
 function Footer() {
+    const location = useLocation();
+
+    // Similar function as in Nav.js
+    const getFooterLink = (path, hash, text) => {
+        if (location.pathname === '/') {
+            return <a href={`#${hash}`}>{text}</a>;
+        }
+        return <Link to={`/${path}#${hash}`}>{text}</Link>;
+    };
+
     return (
         <footer className="footer">
             <section className="footer-section logo-section">
@@ -9,12 +20,12 @@ function Footer() {
             <section className="footer-section navigation-section">
                 <h4>Doormat Navigation</h4>
                 <ul>
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li><a href="/menu">Menu</a></li>
-                    <li><a href="/reservation">Reservations</a></li>
-                    <li><a href="/order">Order Online</a></li>
-                    <li><a href="/login">Login</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li>{getFooterLink('about', 'about', 'About')}</li>
+                    <li>{getFooterLink('menu', 'menu', 'Menu')}</li>
+                    <li><Link to="/booking">Reservations</Link></li>
+                    <li><Link to="/order">Order Online</Link></li>
+                    <li><Link to="/login">Login</Link></li>
                 </ul>
             </section>
             <section className="footer-section contact-section">

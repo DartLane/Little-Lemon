@@ -1,11 +1,32 @@
-import './Specials.css'
+import './Specials.css';
+import { Link, useLocation } from 'react-router';
 
 function Specials() {
+    const location = useLocation();
+
+    // Function to determine if we need a hash link or a regular link
+    const getMenuLink = () => {
+        // If we're on the homepage, use hash link
+        if (location.pathname === '/') {
+            return (
+                <a href="#menu">
+                    <button className="yellow-button specials-button">Online Menu</button>
+                </a>
+            );
+        }
+        // Otherwise use regular link that will redirect to homepage + hash
+        return (
+            <Link to="/#menu">
+                <button className="yellow-button specials-button">Online Menu</button>
+            </Link>
+        );
+    };
+
     return (
         <section className="specials-section">
             <div className="specials-header">
                 <h3>This weeks specials!</h3>
-                <button className="yellow-button specials-button">Online Menu</button>
+                {getMenuLink()}
             </div>
             <section className="specials-cards">
                 <div className="specials-dish">
