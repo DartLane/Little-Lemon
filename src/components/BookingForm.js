@@ -13,9 +13,14 @@ export default function BookingForm(props) {
         props.updateTimes(selectedDate);
     }
 
+    const handleSubmit = e => {
+        e.preventDefault();
+        props.onSubmit();
+    }
+
     return (
         <div className='booking-form-container'>
-            <form className='booking-form-info'>
+            <form className='booking-form-info' onSubmit={handleSubmit}>
                 <div className='form-inputs'>
                     <label htmlFor="res-date">Choose date</label>
                     <input type="date" id="res-date" value={date} onChange={onChangeDate} required />
