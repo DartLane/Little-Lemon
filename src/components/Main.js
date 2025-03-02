@@ -8,6 +8,7 @@ import Chicago from './Chicago';
 import BookingInformation from './BookingInformation';
 import Order from './Order';
 import Login from './Login';
+import BookingPage from './BookingPage';
 
 function HomePage() {
     // Create refs for each section
@@ -54,7 +55,7 @@ function Main() {
         <main className="main">
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/booking" element={<BookingInformation />} />
+                <Route path="/booking" element={<BookingPage />} />
                 {/* Redirect routes for section navigation */}
                 <Route path="/about" element={<HomePage />} />
                 <Route path="/menu" element={<HomePage />} />
