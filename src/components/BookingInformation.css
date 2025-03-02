@@ -28,4 +28,5 @@
 
 .booking-information-container span {
     grid-column: 2 / span 6;
+    color: #FFFFFF
 }

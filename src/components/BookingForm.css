@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
-    padding: 2rem 0;
+    padding: 4rem 0;
 }
 
 .booking-form-info {
@@ -13,13 +13,49 @@
     width: 100%;
 }
 
-.booking-form-info input,
-.booking-form-info select {
+.form-inputs {
+    margin-bottom: 2rem;
+}
+
+.form-inputs input,
+.form-inputs select {
     margin-bottom: 1rem;
     font-family: 'Karla', sans-serif;
     font-weight: 800;
     font-size: 20px;
     color: #495E57;
+    height: 50px;
+    background-color: #EDEFEE;
+    border: none;
+    box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+    border-radius: 8%;
+}
+
+.form-inputs input {
+    padding-left: 2rem; /* Use padding-left instead of text-indent for inputs */
+}
+
+.form-inputs input[type="date"] {
+    padding-left: 2rem; /* Ensure date input has the same padding */
+}
+
+.form-inputs input[type="number"] {
+    padding-left: 2rem; /* Ensure number input has the same padding */
+}
+
+/* Ensure the number input doesn’t expand width due to padding */
+.form-inputs input[type="number"] {
+    width: 100%; /* Explicitly set width to ensure it doesn’t stretch */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.form-inputs input[type="date"] {
+    width: 100%; /* Explicitly set width to ensure it doesn’t stretch */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+.form-inputs select {
+    padding-left: 2rem; /* Keep padding for select elements */
 }
 
 .booking-form-info label {
@@ -30,5 +66,31 @@
 }
 
 .booking-form-submit {
+    width: 100%;
     margin-left: 25%;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .booking-form-container {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 10px;
+    }
+
+    .booking-form-info {
+        grid-column: 2 / span 6;
+    }
+
+    .booking-form-submit {
+        width: 100%;
+        margin-left: 0%;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .booking-form-info {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
