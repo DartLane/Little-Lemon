@@ -18,3 +18,5 @@ export default function BookingPage() {
         </>
     );
 }
+
+export { initializeTimes, updateTimes };

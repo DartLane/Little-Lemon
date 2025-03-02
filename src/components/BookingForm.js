@@ -21,14 +21,14 @@ export default function BookingForm(props) {
                     <input type="date" id="res-date" value={date} onChange={onChangeDate} required />
                     <label htmlFor="res-time">Choose time</label>
                     <select id="res-time" value={time} onChange={e => setTime(e.target.value)} required>
-                        <option value="" disabled selected>Select time</option>
+                        <option value="" disabled>Select time</option>
                         {props.availableTimes.map(time => <option key={time}>{time}</option>)}
                     </select>
                     <label htmlFor="guests">Number of guests</label>
                     <input type="number" placeholder="1" min="1" max="10" id="guests" value={numberGuests} onChange={e => setNumberGuests(e.target.value)} required />
                     <label htmlFor="occasion">Occasion</label>
                     <select id="occasion" value={occasion} onChange={e => setOccasion(e.target.value)} required>
-                        <option value="" disabled selected>Select occasion</option>
+                        <option value="" disabled>Select occasion</option>
                         <option>Birthday</option>
                         <option>Engagement</option>
                         <option>Anniversary</option>
