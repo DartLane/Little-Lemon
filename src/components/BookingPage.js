@@ -1,12 +1,18 @@
 import BookingForm from './BookingForm';
 import BookingInformation from './BookingInformation';
-import { useReducer, useState } from 'react';
+import { useReducer } from 'react';
+import { fetchAPI } from '../api';
 
+// Updated to use the fetchAPI function
 const updateTimes = (state, action) => {
-    return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+    return fetchAPI(new Date(action));  // Convert string date to Date object
 }
 
-const initializeTimes = () => ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+// Updated to fetch times for today's date
+const initializeTimes = () => {
+    const today = new Date();
+    return fetchAPI(today);
+}
 
 export default function BookingPage() {
     const [state, dispatch] = useReducer(updateTimes, initializeTimes());
