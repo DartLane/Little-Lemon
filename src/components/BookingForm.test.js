@@ -13,7 +13,7 @@ describe('BookingForm', () => {
     test('BookingForm can be submitted', () => {
         const handleSubmit = jest.fn();
         render(<BookingForm availableTimes={[]} updateTimes={() => {}} onSubmit={handleSubmit} />);
-        const submitButton = screen.getByDisplayValue("Make Your reservation");
+        const submitButton = screen.getByText("Make Your reservation");
         fireEvent.click(submitButton);
         expect(handleSubmit).toHaveBeenCalled();
     });

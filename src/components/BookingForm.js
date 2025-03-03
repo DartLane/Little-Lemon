@@ -4,7 +4,7 @@ import { useState } from 'react';
 export default function BookingForm(props) {
     const [date, setDate] = useState('');
     const [time, setTime] = useState('');
-    const [numberGuests, setNumberGuests] = useState();
+    const [numberGuests, setNumberGuests] = useState('');
     const [occasion, setOccasion] = useState('');
 
     const onChangeDate = e => {
@@ -15,7 +15,13 @@ export default function BookingForm(props) {
 
     const handleSubmit = e => {
         e.preventDefault();
-        props.onSubmit();
+        const formData = {
+            date,
+            time,
+            numberGuests,
+            occasion
+        };
+        props.onSubmit(formData);
     }
 
     return (
@@ -24,22 +30,34 @@ export default function BookingForm(props) {
                 <div className='form-inputs'>
                     <label htmlFor="res-date">Choose date</label>
                     <input type="date" id="res-date" value={date} onChange={onChangeDate} required />
+
                     <label htmlFor="res-time">Choose time</label>
                     <select id="res-time" value={time} onChange={e => setTime(e.target.value)} required>
-                        <option value="" disabled>Select time</option>
+                        <option value="">Select time</option>
                         {props.availableTimes.map(time => <option key={time}>{time}</option>)}
                     </select>
+
                     <label htmlFor="guests">Number of guests</label>
-                    <input type="number" placeholder="1" min="1" max="10" id="guests" value={numberGuests} onChange={e => setNumberGuests(e.target.value)} required />
+                    <input
+                        type="number"
+                        placeholder="1"
+                        min="1"
+                        max="10"
+                        id="guests"
+                        value={numberGuests}
+                        onChange={e => setNumberGuests(e.target.value)}
+                        required
+                    />
+
                     <label htmlFor="occasion">Occasion</label>
                     <select id="occasion" value={occasion} onChange={e => setOccasion(e.target.value)} required>
-                        <option value="" disabled>Select occasion</option>
+                        <option value="">Select occasion</option>
                         <option>Birthday</option>
                         <option>Engagement</option>
                         <option>Anniversary</option>
                     </select>
                 </div>
-                <input type="submit" value="Make Your reservation" className='booking-form-submit yellow-button' />
+                <button type="submit" className="yellow-button">Make Your reservation</button>
             </form>
         </div>
     );

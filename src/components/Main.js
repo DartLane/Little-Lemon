@@ -9,6 +9,7 @@ import BookingInformation from './BookingInformation';
 import Order from './Order';
 import Login from './Login';
 import BookingPage from './BookingPage';
+import ConfirmedBooking from './ConfirmedBooking';
 
 function HomePage() {
     // Create refs for each section
@@ -63,6 +64,7 @@ function Main() {
                 <Route path='/reservation' element={<BookingInformation />} />
                 <Route path='/order' element={<Order />} />
                 <Route path='/login' element={<Login />} />
+                <Route path='/confirmed-booking' element={<ConfirmedBooking />} />
             </Routes>
         </main>
     );
