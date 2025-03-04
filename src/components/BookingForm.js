@@ -52,6 +52,7 @@ export default function BookingForm(props) {
                     setFieldValue('date', e.target.value);
                     props.updateTimes(e.target.value);
                   }}
+                  required
                 />
                 <ErrorMessage name="date" component="div" className="error" />
               </div>
@@ -62,6 +63,7 @@ export default function BookingForm(props) {
                   as="select"
                   id="res-time"
                   name="time"
+                  required
                 >
                   <option value="">Select time</option>
                   {props.availableTimes.map(time => (
@@ -82,6 +84,7 @@ export default function BookingForm(props) {
                   max="10"
                   id="guests"
                   name="numberGuests"
+                  required
                 />
                 <ErrorMessage name="numberGuests" component="div" className="error" />
               </div>
@@ -92,6 +95,7 @@ export default function BookingForm(props) {
                   as="select"
                   id="occasion"
                   name="occasion"
+                  required
                 >
                   <option value="">Select occasion</option>
                   <option value="Birthday">Birthday</option>
