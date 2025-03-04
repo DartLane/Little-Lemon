@@ -105,7 +105,7 @@ export default function BookingForm(props) {
                 <ErrorMessage name="occasion" component="div" className="error" />
               </div>
             </div>
-            <button type="submit" className="yellow-button"  disabled={!isValid || !dirty}>
+            <button type="submit" className="yellow-button" aria-label="On Click" disabled={!isValid || !dirty}>
               Make Your reservation
             </button>
           </Form>
