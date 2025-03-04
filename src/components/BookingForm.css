@@ -70,6 +70,16 @@
     margin-left: 25%;
 }
 
+.error {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+  }
+
+  .form-inputs > div {
+    margin-bottom: 1rem;
+  }
+
 /* Responsive design */
 @media (max-width: 900px) {
     .booking-form-container {

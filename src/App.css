@@ -66,3 +66,9 @@ a {
   height: 73px;
   cursor: pointer;
 }
+
+.yellow-button:disabled {
+  background-color: #F4CE14;
+  opacity: 0.8;
+  cursor: not-allowed;
+}
